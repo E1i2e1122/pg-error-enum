@@ -1,5 +1,41 @@
 # Changelog
 
+## [3.0.0](https://github.com/E1i2e1122/pg-error-enum/compare/pg-error-enum-v2.0.1...pg-error-enum-v3.0.0) (2026-11-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* test on node 24 (new lts), drop node 18 ([#568](https://github.com/E1i2e1122/pg-error-enum/issues/568))
+* This drops support for Node 18, and switches to a pure ESM package. This means that you either have to use `"type": "module"` in your `package.json`, or upgrade to a Node version that supports [require(esm)](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require), i.e. >= [v20.19.0](https://nodejs.org/en/blog/release/v20.19.0#requireesm-is-now-enabled-by-default), >= [v22.12.0](https://nodejs.org/en/blog/release/v22.12.0#requireesm-is-now-enabled-by-default), or v23 and above.
+* **sync:** This removes an enum constant, and could possibly break code that uses it.
+
+### Features
+
+* add FILE_NAME_TOO_LONG (58P03) ([#533](https://github.com/E1i2e1122/pg-error-enum/issues/533)) ([1c2e02d](https://github.com/E1i2e1122/pg-error-enum/commit/1c2e02db01f870ee7e8c9ff0001c8445b6d9149b))
+* add INVALID_ARGUMENT_FOR_XQUERY (10608) ([#540](https://github.com/E1i2e1122/pg-error-enum/issues/540)) ([2846aa7](https://github.com/E1i2e1122/pg-error-enum/commit/2846aa7287dd704a8ccaa7c2a2e6f0512640746d))
+* publish with npm provenance ([05b0c79](https://github.com/E1i2e1122/pg-error-enum/commit/05b0c790bd2970944463cac16b9a72947dd3b8d8))
+* sync with latest Postgres Errors ([#523](https://github.com/E1i2e1122/pg-error-enum/issues/523)) ([de6040d](https://github.com/E1i2e1122/pg-error-enum/commit/de6040df5f6e975e41c90d91256988ff9132b5c2))
+* **sync:** remove SNAPSHOT_TOO_OLD (72000) ([#508](https://github.com/E1i2e1122/pg-error-enum/issues/508)) ([c00e5b9](https://github.com/E1i2e1122/pg-error-enum/commit/c00e5b9ca32408648723ebf5275eb4db4f0b632e))
+
+
+### Bug Fixes
+
+* add back prepublish build ([#557](https://github.com/E1i2e1122/pg-error-enum/issues/557)) ([148e079](https://github.com/E1i2e1122/pg-error-enum/commit/148e079d12a305d15cb39499f04b76fcffd55dcf))
+* also allow node versions &gt;v24 ([#571](https://github.com/E1i2e1122/pg-error-enum/issues/571)) ([b6f4fa0](https://github.com/E1i2e1122/pg-error-enum/commit/b6f4fa0e11671cdcbd13ccf0ab2441dcadf1c9b3))
+* also update engine range ([28607ec](https://github.com/E1i2e1122/pg-error-enum/commit/28607eceaac925322310582f654eb77307c2d69d))
+* **build:** remove prepublish test ([#554](https://github.com/E1i2e1122/pg-error-enum/issues/554)) ([4b7ba56](https://github.com/E1i2e1122/pg-error-enum/commit/4b7ba561501c430ad236e4d6e50877b23ffd1825))
+* update sync.ts quotes for prettier changes ([89c6799](https://github.com/E1i2e1122/pg-error-enum/commit/89c6799d7af6c66d7b3d8bd4dae08396a997af3c))
+
+
+### Miscellaneous Chores
+
+* test on node 24 (new lts), drop node 18 ([#568](https://github.com/E1i2e1122/pg-error-enum/issues/568)) ([b188ad1](https://github.com/E1i2e1122/pg-error-enum/commit/b188ad11ce6df00e953c624dc6f7d30802f9efb8))
+
+
+### Build System
+
+* switch to esm ([#552](https://github.com/E1i2e1122/pg-error-enum/issues/552)) ([89988fb](https://github.com/E1i2e1122/pg-error-enum/commit/89988fb6c275436f962cdf1b855a661ffc0b5591))
+
 ## [2.0.1](https://github.com/nihalgonsalves/pg-error-enum/compare/pg-error-enum-v2.0.0...pg-error-enum-v2.0.1) (2025-10-20)
 
 
